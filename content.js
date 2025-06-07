@@ -17,12 +17,22 @@ function gameExited() {
 }
 
 const play_button = document.querySelector('.niO4u.VDgVie.SlP8xc');
-const exit_button = document.querySelector('.c1V3Fb.eqeexb')
+const play_overlay = document.querySelector('.YQ4gaf')
+const exit_button = document.querySelector('.c1V3Fb.eqeexb');
+const exit_overlay = document.querySelector('.R2HGHf.VDgVie');
 
 if (play_button) {
     play_button.onclick = gameEntered;
 }
 
+if (play_overlay) {
+    play_overlay.onclick = gameEntered;
+}
+
 if (exit_button) {
     exit_button.onclick = gameExited;
+}
+
+if (exit_overlay) {
+    exit_overlay.onclick = gameExited;
 }
