@@ -1,24 +1,134 @@
-/*
-
-minesolver
-styles.css 
-Benjamin Tran
-
+/* 
+============================================================================
+   Minesolver - styles.css
+   Author: Benjamin Tran
+   Description: Base styles for the Minesolver Chrome Extension UI
+============================================================================
 */
 
+
+
+/* =========================
+   1. Body and Layout Defaults
+   ========================= */
+
 * {
+    /* Remove margin and padding + use border-box sizing for easier alignment of adjacent cells */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    /* Set dimensions of popup */
     width: 225px;
     height: 200px;
     background-color: rgb(162,209,73);
 }
 
-.cell_1 {
+
+
+/* =========================
+   2. Text Styling
+   ========================= */
+
+.text_default {
+    /* Place text in the center of popup */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Styling the text */
+    font-weight: 200;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #46474a;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.text_active {
+    /* Place text in the center of popup */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Styling the text */
+    font-weight: 200;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #46474a;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    text-align: center;
+
+    /* Hiding text after button reveal */
+    animation: textDisappear forwards;
+    animation-delay: 0.5s;
+}
+
+
+
+/* =========================
+   3. Solve Button Styling
+   ========================= */
+
+button {
+    /* Place the solve button in the center of popup */
+    position: absolute;
+    top: 84px;
+    left: 72.5px;
+    /* Hide the button until animation is triggered */
+    visibility: hidden;
+
+    /* Styling the button */
+    width: 80px;
+    height: 32px;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 26px;
+    cursor: pointer;
+    background-color: #c0c0c0;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #808080;
+    border-right: 2px solid #808080;
+
+    /* Trigger animations */
+    animation: shake 0.3s ease-in-out, buttonAppear 0.3s forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+button:hover {
+    /* Styling the button on hover */
+    background-color: #dcdcdc;
+    border-top: 2px solid #e0e0e0;
+    border-left: 2px solid #e0e0e0;
+    border-bottom: 2px solid #6e6e6e;
+    border-right: 2px solid #6e6e6e;
+}
+
+
+
+/* =========================
+   4. Cell 1 Styling (Dark Green)
+   ========================= */
+
+.cell_1_default {
+    /* Styling for cell when no game is detected */
+    width: 25px;
+    height: 25px;
+    float: left;
+    background-color: rgb(162,209,73);
+}
+
+.cell_1_active {
+    /* Styling for cell when game is detected */
     width: 25px;
     height: 25px;
     float: left;
@@ -29,78 +139,91 @@ body {
 }
 
 .cell_1_none {
+    /* Styling for cell after button reveal (no border) */
     animation: shake 0.3s ease-in-out, cell1None 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_1_top {
+    /* Styling for cell after button reveal (top border) */
     animation: shake 0.3s ease-in-out, cell1Top 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_1_bottom {
+    /* Styling for cell after button reveal (bottom border) */
     animation: shake 0.3s ease-in-out, cell1Bottom 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_1_left {
+    /* Styling for cell after button reveal (left border) */
     animation: shake 0.3s ease-in-out, cell1Left 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_1_right {
+    /* Styling for cell after button reveal (right border) */
     animation: shake 0.3s ease-in-out, cell1Right 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_1_topleft {
+    /* Styling for cell after button reveal (top-left border) */
     animation: shake 0.3s ease-in-out, cell1TopLeft 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_1_topleftcorner {
+    /* Styling for cell after button reveal (top-left corner border) */
     animation: shake 0.3s ease-in-out, cell1TopLeftCorner 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_1_bottomleft {
+    /* Styling for cell after button reveal (bottom-left border) */
     animation: shake 0.3s ease-in-out, cell1BottomLeft 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_1_bottomleftcorner {
+    /* Styling for cell after button reveal (bottom-left corner border) */
     animation: shake 0.3s ease-in-out, cell1BottomLeftCorner 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_1_topright {
+    /* Styling for cell after button reveal (top-right border) */
     animation: shake 0.3s ease-in-out, cell1TopRight 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_1_toprightcorner {
+    /* Styling for cell after button reveal (top-right corner border) */
     animation: shake 0.3s ease-in-out, cell1TopRightCorner 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_1_bottomright {
+    /* Styling for cell after button reveal (bottom-right border) */
     animation: shake 0.3s ease-in-out, cell1BottomRight 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_1_bottomrightcorner {
+    /* Styling for cell after button reveal (bottom-right corner border) */
     animation: shake 0.3s ease-in-out, cell1BottomRightCorner 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
@@ -108,7 +231,20 @@ body {
 
 
 
-.cell_2 {
+/* =========================
+   5. Cell 2 Styling (Light Green)
+   ========================= */
+
+.cell_2_default {
+    /* Styling for cell when no game is detected */
+    width: 25px;
+    height: 25px;
+    float: left;
+    background-color: rgb(170,215,81);
+}
+
+.cell_2_active {
+    /* Styling for cell when game is detected */
     width: 25px;
     height: 25px;
     float: left;
@@ -118,87 +254,105 @@ body {
     animation-delay: 0.5s;
 }
 
-
 .cell_2_none {
+    /* Styling for cell after button reveal (no border) */
     animation: shake 0.3s ease-in-out, cell2None 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_2_top {
+    /* Styling for cell after button reveal (top border) */
     animation: shake 0.3s ease-in-out, cell2Top 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_2_bottom {
+    /* Styling for cell after button reveal (bottom border) */
     animation: shake 0.3s ease-in-out, cell2Bottom 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_2_left {
+    /* Styling for cell after button reveal (left border) */
     animation: shake 0.3s ease-in-out, cell2Left 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_2_right {
+    /* Styling for cell after button reveal (right border) */
     animation: shake 0.3s ease-in-out, cell2Right 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_2_topleft {
+    /* Styling for cell after button reveal (top-left border) */
     animation: shake 0.3s ease-in-out, cell2TopLeft 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_2_topleftcorner {
+    /* Styling for cell after button reveal (top-left corner border) */
     animation: shake 0.3s ease-in-out, cell2TopLeftCorner 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_2_bottomleft {
+    /* Styling for cell after button reveal (bottom-left border) */
     animation: shake 0.3s ease-in-out, cell2BottomLeft 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_2_bottomleftcorner {
+    /* Styling for cell after button reveal (bottom-left corner border) */
     animation: shake 0.3s ease-in-out, cell2BottomLeftCorner 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_2_topright {
+    /* Styling for cell after button reveal (top-right border) */
     animation: shake 0.3s ease-in-out, cell2TopRight 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_2_toprightcorner {
+    /* Styling for cell after button reveal (top-right corner border) */
     animation: shake 0.3s ease-in-out, cell2TopRightCorner 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_2_bottomright {
+    /* Styling for cell after button reveal (bottom-right border) */
     animation: shake 0.3s ease-in-out, cell2BottomRight 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 .cell_2_bottomrightcorner {
+    /* Styling for cell after button reveal (bottom-right corner border) */
     animation: shake 0.3s ease-in-out, cell2BottomRightCorner 0.5 forwards;
     animation-iteration-count: 3;
     animation-delay: 0.5s;
 }
 
 
+
+/* =========================
+   6. Animations
+   ========================= */
+
 @keyframes shake {
+    /* Shake elements during button reveal */
     0%   { transform: translate(2px, -2px); }
     25%  { transform: translate(-2px, 0px); }
     50%  { transform: translate(2px, -2px); }
@@ -206,37 +360,74 @@ body {
     100% { transform: translate(0px, 0px); }
 }
 
+@keyframes textDisappear {
+    /* Hide text */
+    0%   { visibility: visible; }
+    100% { visibility: hidden; }
+}
+
+@keyframes buttonAppear {
+    /* Reveal button */
+    0%   { visibility: hidden; }
+    100% { visibility: visible; }
+}
+
 @keyframes cell1None {
+    /* Change colour of cell during button reveal, no border */
     0%   { background-color: rgb(162,209,73); }
     100% { background-color: rgb(229,194,159); }
 }
 
 @keyframes cell1Top {
+    /* Change colour of cell during button reveal, add top border */
     0%   { background-color: rgb(162,209,73); }
     100% { border-top: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
 }
 
 @keyframes cell1Bottom {
+    /* Change colour of cell during button reveal, add bottom border */
     0%   { background-color: rgb(162,209,73); }
     100% { border-bottom: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
 }
 
 @keyframes cell1Left {
+    /* Change colour of cell during button reveal, add left border */
     0%   { background-color: rgb(162,209,73); }
     100% { border-left: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
 }
 
 @keyframes cell1Right {
+    /* Change colour of cell during button reveal, add right border */
     0%   { background-color: rgb(162,209,73); }
     100% { border-right: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
 }
 
 @keyframes cell1TopLeft {
+    /* Change colour of cell during button reveal, add top-left border */
     0%   { background-color: rgb(162,209,73); }
     100% { border-top: 3px solid rgb(137,175,60); border-left: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
 }
 
+@keyframes cell1BottomLeft {
+    /* Change colour of cell during button reveal, add bottom-left border */
+    0%   { background-color: rgb(162,209,73); }
+    100% { border-bottom: 3px solid rgb(137,175,60); border-left: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
+}
+
+@keyframes cell1TopRight {
+    /* Change colour of cell during button reveal, add top-right border */
+    0%   { background-color: rgb(162,209,73); }
+    100% { border-top: 3px solid rgb(137,175,60); border-right: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
+}
+
+@keyframes cell1BottomRight {
+    /* Change colour of cell during button reveal, add bottom-right border */
+    0%   { background-color: rgb(162,209,73); }
+    100% { border-bottom: 3px solid rgb(137,175,60); border-right: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
+}
+
 @keyframes cell1TopLeftCorner {
+    /* Change colour of cell during button reveal, add top-left corner border */
     0%   { background-color: rgb(162,209,73); }
     100% { 
         background:
@@ -249,12 +440,8 @@ body {
     }
 }
 
-@keyframes cell1BottomLeft {
-    0%   { background-color: rgb(162,209,73); }
-    100% { border-bottom: 3px solid rgb(137,175,60); border-left: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
-}
-
 @keyframes cell1BottomLeftCorner {
+    /* Change colour of cell during button reveal, add bottom-left corner border */
     0%   { background-color: rgb(162,209,73); }
     100% { 
         background:
@@ -267,12 +454,8 @@ body {
     }
 }
 
-@keyframes cell1TopRight {
-    0%   { background-color: rgb(162,209,73); }
-    100% { border-top: 3px solid rgb(137,175,60); border-right: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
-}
-
 @keyframes cell1TopRightCorner {
+    /* Change colour of cell during button reveal, add top-right corner border */
     0%   { background-color: rgb(162,209,73); }
     100% { 
         background:
@@ -285,12 +468,8 @@ body {
     }
 }
 
-@keyframes cell1BottomRight {
-    0%   { background-color: rgb(162,209,73); }
-    100% { border-bottom: 3px solid rgb(137,175,60); border-right: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
-}
-
 @keyframes cell1BottomRightCorner {
+    /* Change colour of cell during button reveal, add bottom-right corner border */
     0%   { background-color: rgb(162,209,73); }
     100% { 
         background:
@@ -303,39 +482,62 @@ body {
     }
 }
 
-
-
 @keyframes cell2None {
+    /* Change colour of cell during button reveal, no border */
     0%   { background-color: rgb(170,215,81); }
     100% { background-color: rgb(215,184,153); }
 }
 
 @keyframes cell2Top {
+    /* Change colour of cell during button reveal, add top border */
     0%   { background-color: rgb(170,215,81); }
     100% { border-top: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
 }
 
 @keyframes cell2Bottom {
+    /* Change colour of cell during button reveal, add bottom border */
     0%   { background-color: rgb(170,215,81); }
     100% { border-bottom: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
 }
 
 @keyframes cell2Left {
+    /* Change colour of cell during button reveal, left border */
     0%   { background-color: rgb(170,215,81); }
     100% { border-left: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
 }
 
 @keyframes cell2Right {
+    /* Change colour of cell during button reveal, add right border */
     0%   { background-color: rgb(170,215,81); }
     100% { border-right: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
 }
 
 @keyframes cell2TopLeft {
+    /* Change colour of cell during button reveal, add top-left border */
     0%   { background-color: rgb(170,215,81); }
     100% { border-top: 3px solid rgb(137,175,60); border-left: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
 }
 
+@keyframes cell2BottomLeft {
+    /* Change colour of cell during button reveal, add bottom-left border */
+    0%   { background-color: rgb(170,215,81); }
+    100% { border-bottom: 3px solid rgb(137,175,60); border-left: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
+}
+
+@keyframes cell2TopRight {
+    /* Change colour of cell during button reveal, add top-right border */
+    0%   { background-color: rgb(170,215,81); }
+    100% { border-top: 3px solid rgb(137,175,60); border-right: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
+}
+
+@keyframes cell2BottomRight {
+    /* Change colour of cell during button reveal, add bottom-right border */
+    0%   { background-color: rgb(170,215,81); }
+    100% { border-bottom: 3px solid rgb(137,175,60); border-right: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
+}
+
 @keyframes cell2TopLeftCorner {
+    /* Change colour of cell during button reveal, add top-left corner border */
     0%   { background-color: rgb(162,209,73); }
     100% { 
         background:
@@ -348,12 +550,8 @@ body {
     }
 }
 
-@keyframes cell2BottomLeft {
-    0%   { background-color: rgb(170,215,81); }
-    100% { border-bottom: 3px solid rgb(137,175,60); border-left: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
-}
-
 @keyframes cell2BottomLeftCorner {
+    /* Change colour of cell during button reveal, add bottom-left corner border */
     0%   { background-color: rgb(162,209,73); }
     100% { 
         background:
@@ -366,12 +564,8 @@ body {
     }
 }
 
-@keyframes cell2TopRight {
-    0%   { background-color: rgb(170,215,81); }
-    100% { border-top: 3px solid rgb(137,175,60); border-right: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
-}
-
 @keyframes cell2TopRightCorner {
+    /* Change colour of cell during button reveal, add top-right corner border */
     0%   { background-color: rgb(162,209,73); }
     100% { 
         background:
@@ -384,12 +578,8 @@ body {
     }
 }
 
-@keyframes cell2BottomRight {
-    0%   { background-color: rgb(170,215,81); }
-    100% { border-bottom: 3px solid rgb(137,175,60); border-right: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
-}
-
 @keyframes cell2BottomRightCorner {
+    /* Change colour of cell during button reveal, add bottom-right corner border */
     0%   { background-color: rgb(162,209,73); }
     100% { 
         background:

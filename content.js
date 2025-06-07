@@ -6,12 +6,14 @@ function gameEntered() {
     console.log("entered game");
     game_entered = true;
     console.log(game_entered);
+    chrome.runtime.sendMessage({ game_entered: game_entered})
 }
 
 function gameExited() {
     console.log("exited game");
     game_entered = false;
     console.log(game_entered);
+    chrome.runtime.sendMessage({ game_entered: game_entered})
 }
 
 const play_button = document.querySelector('.niO4u.VDgVie.SlP8xc');
