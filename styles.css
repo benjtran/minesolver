@@ -1,0 +1,403 @@
+/*
+
+minesolver
+styles.css 
+Benjamin Tran
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 225px;
+    height: 200px;
+    background-color: rgb(162,209,73);
+}
+
+.cell_1 {
+    width: 25px;
+    height: 25px;
+    float: left;
+    background-color: rgb(162,209,73);
+    animation: shake 0.3s ease-in-out;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_none {
+    animation: shake 0.3s ease-in-out, cell1None 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_top {
+    animation: shake 0.3s ease-in-out, cell1Top 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_bottom {
+    animation: shake 0.3s ease-in-out, cell1Bottom 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_left {
+    animation: shake 0.3s ease-in-out, cell1Left 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_right {
+    animation: shake 0.3s ease-in-out, cell1Right 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_topleft {
+    animation: shake 0.3s ease-in-out, cell1TopLeft 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_topleftcorner {
+    animation: shake 0.3s ease-in-out, cell1TopLeftCorner 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_bottomleft {
+    animation: shake 0.3s ease-in-out, cell1BottomLeft 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_bottomleftcorner {
+    animation: shake 0.3s ease-in-out, cell1BottomLeftCorner 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_topright {
+    animation: shake 0.3s ease-in-out, cell1TopRight 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_toprightcorner {
+    animation: shake 0.3s ease-in-out, cell1TopRightCorner 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_bottomright {
+    animation: shake 0.3s ease-in-out, cell1BottomRight 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_1_bottomrightcorner {
+    animation: shake 0.3s ease-in-out, cell1BottomRightCorner 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+
+
+.cell_2 {
+    width: 25px;
+    height: 25px;
+    float: left;
+    background-color: rgb(170,215,81);
+    animation: shake 0.3s  ease-in-out;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+
+.cell_2_none {
+    animation: shake 0.3s ease-in-out, cell2None 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_2_top {
+    animation: shake 0.3s ease-in-out, cell2Top 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_2_bottom {
+    animation: shake 0.3s ease-in-out, cell2Bottom 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_2_left {
+    animation: shake 0.3s ease-in-out, cell2Left 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_2_right {
+    animation: shake 0.3s ease-in-out, cell2Right 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_2_topleft {
+    animation: shake 0.3s ease-in-out, cell2TopLeft 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_2_topleftcorner {
+    animation: shake 0.3s ease-in-out, cell2TopLeftCorner 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_2_bottomleft {
+    animation: shake 0.3s ease-in-out, cell2BottomLeft 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_2_bottomleftcorner {
+    animation: shake 0.3s ease-in-out, cell2BottomLeftCorner 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_2_topright {
+    animation: shake 0.3s ease-in-out, cell2TopRight 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_2_toprightcorner {
+    animation: shake 0.3s ease-in-out, cell2TopRightCorner 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_2_bottomright {
+    animation: shake 0.3s ease-in-out, cell2BottomRight 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+.cell_2_bottomrightcorner {
+    animation: shake 0.3s ease-in-out, cell2BottomRightCorner 0.5 forwards;
+    animation-iteration-count: 3;
+    animation-delay: 0.5s;
+}
+
+
+@keyframes shake {
+    0%   { transform: translate(2px, -2px); }
+    25%  { transform: translate(-2px, 0px); }
+    50%  { transform: translate(2px, -2px); }
+    75%  { transform: translate(-2px, 2px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+@keyframes cell1None {
+    0%   { background-color: rgb(162,209,73); }
+    100% { background-color: rgb(229,194,159); }
+}
+
+@keyframes cell1Top {
+    0%   { background-color: rgb(162,209,73); }
+    100% { border-top: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
+}
+
+@keyframes cell1Bottom {
+    0%   { background-color: rgb(162,209,73); }
+    100% { border-bottom: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
+}
+
+@keyframes cell1Left {
+    0%   { background-color: rgb(162,209,73); }
+    100% { border-left: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
+}
+
+@keyframes cell1Right {
+    0%   { background-color: rgb(162,209,73); }
+    100% { border-right: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
+}
+
+@keyframes cell1TopLeft {
+    0%   { background-color: rgb(162,209,73); }
+    100% { border-top: 3px solid rgb(137,175,60); border-left: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
+}
+
+@keyframes cell1TopLeftCorner {
+    0%   { background-color: rgb(162,209,73); }
+    100% { 
+        background:
+            linear-gradient(to bottom, rgb(137,175,60) 3px, transparent 3px),
+            linear-gradient(to right, rgb(137,175,60) 3px, transparent 3px),
+            rgb(229,194,159);
+        background-repeat: no-repeat;
+        background-size: 3px 3px;
+        background-position: top left;
+    }
+}
+
+@keyframes cell1BottomLeft {
+    0%   { background-color: rgb(162,209,73); }
+    100% { border-bottom: 3px solid rgb(137,175,60); border-left: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
+}
+
+@keyframes cell1BottomLeftCorner {
+    0%   { background-color: rgb(162,209,73); }
+    100% { 
+        background:
+            linear-gradient(to top, rgb(137,175,60) 3px, transparent 3px),
+            linear-gradient(to right, rgb(137,175,60) 3px, transparent 3px),
+            rgb(229,194,159);
+        background-repeat: no-repeat;
+        background-size: 3px 3px;
+        background-position: bottom left;
+    }
+}
+
+@keyframes cell1TopRight {
+    0%   { background-color: rgb(162,209,73); }
+    100% { border-top: 3px solid rgb(137,175,60); border-right: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
+}
+
+@keyframes cell1TopRightCorner {
+    0%   { background-color: rgb(162,209,73); }
+    100% { 
+        background:
+            linear-gradient(to bottom, rgb(137,175,60) 3px, transparent 3px),
+            linear-gradient(to left, rgb(137,175,60) 3px, transparent 3px),
+            rgb(229,194,159);
+        background-repeat: no-repeat;
+        background-size: 3px 3px;
+        background-position: top right;
+    }
+}
+
+@keyframes cell1BottomRight {
+    0%   { background-color: rgb(162,209,73); }
+    100% { border-bottom: 3px solid rgb(137,175,60); border-right: 3px solid rgb(137,175,60); background-color: rgb(229,194,159); }
+}
+
+@keyframes cell1BottomRightCorner {
+    0%   { background-color: rgb(162,209,73); }
+    100% { 
+        background:
+            linear-gradient(to top, rgb(137,175,60) 3px, transparent 3px),
+            linear-gradient(to left, rgb(137,175,60) 3px, transparent 3px),
+            rgb(229,194,159);
+        background-repeat: no-repeat;
+        background-size: 3px 3px;
+        background-position: bottom right;
+    }
+}
+
+
+
+@keyframes cell2None {
+    0%   { background-color: rgb(170,215,81); }
+    100% { background-color: rgb(215,184,153); }
+}
+
+@keyframes cell2Top {
+    0%   { background-color: rgb(170,215,81); }
+    100% { border-top: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
+}
+
+@keyframes cell2Bottom {
+    0%   { background-color: rgb(170,215,81); }
+    100% { border-bottom: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
+}
+
+@keyframes cell2Left {
+    0%   { background-color: rgb(170,215,81); }
+    100% { border-left: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
+}
+
+@keyframes cell2Right {
+    0%   { background-color: rgb(170,215,81); }
+    100% { border-right: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
+}
+
+@keyframes cell2TopLeft {
+    0%   { background-color: rgb(170,215,81); }
+    100% { border-top: 3px solid rgb(137,175,60); border-left: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
+}
+
+@keyframes cell2TopLeftCorner {
+    0%   { background-color: rgb(162,209,73); }
+    100% { 
+        background:
+            linear-gradient(to bottom, rgb(137,175,60) 3px, transparent 3px),
+            linear-gradient(to right, rgb(137,175,60) 3px, transparent 3px),
+            rgb(215,184,153);
+        background-repeat: no-repeat;
+        background-size: 3px 3px;
+        background-position: top left;
+    }
+}
+
+@keyframes cell2BottomLeft {
+    0%   { background-color: rgb(170,215,81); }
+    100% { border-bottom: 3px solid rgb(137,175,60); border-left: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
+}
+
+@keyframes cell2BottomLeftCorner {
+    0%   { background-color: rgb(162,209,73); }
+    100% { 
+        background:
+            linear-gradient(to top, rgb(137,175,60) 3px, transparent 3px),
+            linear-gradient(to right, rgb(137,175,60) 3px, transparent 3px),
+            rgb(215,184,153);
+        background-repeat: no-repeat;
+        background-size: 3px 3px;
+        background-position: bottom left;
+    }
+}
+
+@keyframes cell2TopRight {
+    0%   { background-color: rgb(170,215,81); }
+    100% { border-top: 3px solid rgb(137,175,60); border-right: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
+}
+
+@keyframes cell2TopRightCorner {
+    0%   { background-color: rgb(162,209,73); }
+    100% { 
+        background:
+            linear-gradient(to bottom, rgb(137,175,60) 3px, transparent 3px),
+            linear-gradient(to left, rgb(137,175,60) 3px, transparent 3px),
+            rgb(215,184,153);
+        background-repeat: no-repeat;
+        background-size: 3px 3px;
+        background-position: top right;
+    }
+}
+
+@keyframes cell2BottomRight {
+    0%   { background-color: rgb(170,215,81); }
+    100% { border-bottom: 3px solid rgb(137,175,60); border-right: 3px solid rgb(137,175,60); background-color: rgb(215,184,153); }
+}
+
+@keyframes cell2BottomRightCorner {
+    0%   { background-color: rgb(162,209,73); }
+    100% { 
+        background:
+            linear-gradient(to top, rgb(137,175,60) 3px, transparent 3px),
+            linear-gradient(to left, rgb(137,175,60) 3px, transparent 3px),
+            rgb(215,184,153);
+        background-repeat: no-repeat;
+        background-size: 3px 3px;
+        background-position: bottom right;
+    }
+}
