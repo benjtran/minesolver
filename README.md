@@ -2,6 +2,8 @@
 
 This Chrome extension automatically detects and solves **Google's Minesweeper** using computer vision powered by **TensorFlow.js** and **YOLOv11**.
 
+**WIP.**
+
 ## Features
 
 - Detects covered, flagged, and revealed tiles
@@ -24,5 +26,3 @@ This Chrome extension automatically detects and solves **Google's Minesweeper** 
 - JavaScript (Chrome Extensions API)
 - OpenCV.js for image processing
 - HTML/CSS for popup UI
-
-## 📂 File Structure
