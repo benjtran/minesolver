@@ -5,6 +5,65 @@
    Description: Active popup when game is detected
 ============================================================================
 */
+class Board {
+    constructor() {
+        this.rows = 8;
+        this.cols = 10;
+
+        this.board_state = Array.from({ length: this.rows }, () => Array(this.cols).fill(0));
+    }
+
+    async readCell(cell_image) {
+        const response = await fetch('https://serverless.roboflow.com/infer/workflows/school-mu231/custom-workflow-3', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                api_key: '0J470nlTFy0obprDGPDU',
+                inputs: {
+                    "image": {"type": "base64", "value": cell_image}
+                }
+            })
+        });
+
+        return await response.json();
+    }   
+
+    async readBoard(board) {
+
+        const length = 45; // width and height of each cell
+
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+                const cell = document.createElement('canvas');
+                const x = j * length;
+                const y = i * length;
+                cell.width = length;
+                cell.height = length;
+
+                const cell_ctx = cell.getContext('2d');
+                cell_ctx.drawImage(board, x, y, length, length, 0, 0, length, length);
+
+                // Use the loaded model for prediction
+                const dataURL = cell.toDataURL('image/png'); // returns something like "data:image/png;base64,...."
+                const cell_image = dataURL.replace(/^data:image\/png;base64,/, ''); // remove the prefix
+                const cell_json = await this.readCell(cell_image);
+                let cell_value = cell_json.outputs[0].predictions.top;
+                if (cell_value == "empty") {
+                    cell_value = 0;
+                } 
+                if (cell_value == "unknown") {
+                    cell_value = -1;
+                }
+                this.board_state[i][j] = cell_value
+                console.log(i + " " + j)
+            }
+        }
+        this.board_state[0][0] = 0;
+        console.log(this.board_state)
+    }
+}
 
 
 
@@ -101,6 +160,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         console.log("Clicked on board!");
         // Respond back to popup
         sendResponse({ received: true, value: message.solving });
+        const game_board = document.querySelector('canvas');
+        if (game_board) {
+            const b = new Board();
+            b.readBoard(game_board);
+            console.log("Board read")
+        } else {
+            console.error("Canvas element not found");
+        }
     }
 });
 // Convert page coordinates to canvas-relative ones
