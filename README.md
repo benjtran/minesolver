@@ -4,9 +4,9 @@ This Chrome extension automatically detects and solves **Google's Minesweeper** 
 
 See a demo below!
 
-<a href="https://www.youtube.com/watch?v=VugUWUprkCs" target="_blank">
-  <img src="https://img.youtube.com/vi/VugUWUprkCs/0.jpg" alt="See a demo!" />
-</a>
+<img src="icons/Untitled.png" width="400" alt="Iris Plot">
+
+<p><a href="https://www.youtube.com/watch?v=VugUWUprkCs">See a demo!</a></p>
 
 ## Features
 
