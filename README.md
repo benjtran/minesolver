@@ -2,8 +2,9 @@
 
 This Chrome extension automatically detects and solves **Google's Minesweeper** using computer vision powered by Vision Transformer (ViT)
 
-[![See a demo!](https://img.youtube.com/vi/VugUWUprkCs/0.jpg)](https://www.youtube.com/watch?v=VugUWUprkCs)
-
+<a href="https://www.youtube.com/watch?v=VugUWUprkCs" target="_blank">
+  <img src="https://img.youtube.com/vi/VugUWUprkCs/0.jpg" alt="See a demo!" />
+</a>
 
 ## Features
 
