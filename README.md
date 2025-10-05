@@ -1,8 +1,6 @@
 # Minesolver
 
-This Chrome extension automatically detects and solves **Google's Minesweeper** using computer vision powered by **TensorFlow.js** and **YOLOv11**.
-
-**WIP.**
+This Chrome extension automatically detects and solves **Google's Minesweeper** using computer vision powered by Vision Transformer (ViT)
 
 ## Features
 
