@@ -2,6 +2,9 @@
 
 This Chrome extension automatically detects and solves **Google's Minesweeper** using computer vision powered by Vision Transformer (ViT)
 
+[![See a demo!](https://img.youtube.com/vi/VugUWUprkCs/0.jpg)](https://www.youtube.com/watch?v=VugUWUprkCs)
+
+
 ## Features
 
 - Detects covered, flagged, and revealed tiles
