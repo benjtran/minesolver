@@ -37,7 +37,7 @@ class Board {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        api_key: '0J470nlTFy0obprDGPDU',
+        api_key: 'api_key',
         inputs: {
           "image": { "type": "base64", "value": cell_image }
         }
@@ -291,6 +291,3 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     solveBoard(game_board, b);
   }
 });
-// Convert page coordinates to canvas-relative ones
-
-// chrome.runtime.onMessage.addListener()
