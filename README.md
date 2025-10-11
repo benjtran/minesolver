@@ -6,7 +6,7 @@ See a demo below!
 
 <img src="icons/Untitled.png" width="400" alt="Iris Plot">
 
-<p><a href="https://www.youtube.com/watch?v=VugUWUprkCs">See a demo!</a></p>
+<p><a href="https://www.youtube.com/watch?v=VugUWUprkCs">Link to demo</a></p>
 
 ## Features
 
